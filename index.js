@@ -1,17 +1,29 @@
-const express = require("express");
+import express from "express";
+import home from "./pages/home.js";
+import about from "./pages/about.js";
+import contact from "./pages/contact.js";
+import demo, { demo2 } from "./pages/demo.js"; //example of more than one export of function from same file
+
 const app = express();
 
 app.get("", (req, resp) => {
-  resp.send("<h1>Basic Node js example</h1>");
+  resp.send(home());
 });
 
 app.get("/about", (req, resp) => {
-  resp.send("<h1>This is about page</h1>");
+  resp.send(about());
 });
 
 app.get("/contact", (req, resp) => {
-  resp.send("<h1>This is contact page</h1>");
+  resp.send(contact());
 });
+
+app.get("/demo", (req, resp) => {
+   resp.send(demo());
+});
+
+app.get("/demo2", (req, resp) => {
+   resp.send(demo2())});
 
 app.listen(3200);
 
