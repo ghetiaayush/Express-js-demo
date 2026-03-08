@@ -9,6 +9,9 @@ import submit from "./pages/submit.js";
 
 const app = express();
 
+// serve static assets from public directory (css, js, images)
+app.use(express.static('public'));
+
 app.get("/", (req, resp) => {
   resp.send(home());
 });
