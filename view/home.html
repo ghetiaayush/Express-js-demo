@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Amazon-style Home</title>
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+
+      body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+         background: #eaeaea;
+         color: #111;
+      }
+
+      .header {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: space-between;
+         background: #131921;
+         color: #fff;
+         padding: 12px 24px;
+         gap: 16px;
+      }
+
+      .logo {
+         font-size: 28px;
+         font-weight: 700;
+         letter-spacing: -1px;
+      }
+
+      .logo span {
+         color: #ff9900;
+      }
+
+      .search {
+         flex: 1;
+         min-width: 240px;
+         display: flex;
+      }
+
+      .search input {
+         width: 100%;
+         padding: 10px 14px;
+         border: none;
+         border-radius: 4px 0 0 4px;
+         font-size: 14px;
+      }
+
+      .search button {
+         border: none;
+         padding: 0 16px;
+         background: #febd69;
+         color: #111;
+         font-weight: 700;
+         cursor: pointer;
+         border-radius: 0 4px 4px 0;
+      }
+
+      .header-nav {
+         display: flex;
+         gap: 22px;
+         align-items: center;
+         flex-wrap: wrap;
+         font-size: 13px;
+      }
+
+      .header-nav a {
+         color: #fff;
+         text-decoration: none;
+         line-height: 1.2;
+      }
+
+      .promo-bar {
+         background: #232f3e;
+         color: #fff;
+         padding: 10px 24px;
+         font-size: 14px;
+      }
+
+      .hero {
+         position: relative;
+         max-width: 1440px;
+         margin: 16px auto;
+      }
+
+      .hero img {
+         width: 100%;
+         display: block;
+         height: auto;
+      }
+
+      .hero-banner {
+         position: absolute;
+         left: 30px;
+         bottom: 30px;
+         color: #fff;
+         max-width: 520px;
+      }
+
+      .hero-banner h1 {
+         font-size: 44px;
+         margin-bottom: 12px;
+         line-height: 1.05;
+      }
+
+      .hero-banner p {
+         font-size: 18px;
+         line-height: 1.5;
+      }
+
+      .section {
+         max-width: 1200px;
+         margin: 32px auto;
+         padding: 0 24px;
+      }
+
+      .section h2 {
+         font-size: 24px;
+         margin-bottom: 18px;
+      }
+
+      .cards,
+      .deals-grid {
+         display: grid;
+         gap: 16px;
+         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .card,
+      .product {
+         background: #fff;
+         border-radius: 8px;
+         overflow: hidden;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+         text-decoration: none;
+         color: inherit;
+      }
+
+      .card img,
+      .product img {
+         width: 100%;
+         display: block;
+      }
+
+      .card-body,
+      .product-info {
+         padding: 16px;
+      }
+
+      .card-body h3 {
+         margin: 0 0 8px;
+         font-size: 16px;
+      }
+
+      .card-body p,
+      .product-info p {
+         margin: 0;
+         font-size: 14px;
+         color: #555;
+         line-height: 1.5;
+      }
+
+      .product-info strong {
+         display: block;
+         margin-bottom: 10px;
+         font-size: 15px;
+      }
+
+      .price {
+         color: #b12704;
+         font-size: 16px;
+         font-weight: 700;
+      }
+
+      .footer {
+         text-align: center;
+         padding: 24px;
+         color: #555;
+         font-size: 13px;
+      }
+
+      @media (max-width: 760px) {
+         .hero-banner {
+            position: static;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.35);
+            margin-top: -120px;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <div class="logo"><span>amazon</span></div>
+      <div class="search">
+         <input type="text" placeholder="Search Amazon" />
+         <button>Search</button>
+      </div>
+      <nav class="header-nav">
+         <a href="/login">Sign in</a>
+         <a href="/about">About</a>
+         <a href="/contact">Contact</a>
+         <a href="/help">Help</a>
+      </nav>
+   </header>
+
+   <div class="promo-bar">Free delivery on eligible orders & FREE returns</div>
+
+   <section class="hero">
+      <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Amazon style hero banner" />
+      <div class="hero-banner">
+         <h1>Discover deals on top brands</h1>
+         <p>Shop electronics, home essentials, fashion, and more with fast delivery and low prices.</p>
+      </div>
+   </section>
+
+   <section class="section">
+      <h2>Shop by category</h2>
+      <div class="cards">
+         <a class="card" href="#">
+            <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Electronics category" />
+            <div class="card-body">
+               <h3>Electronics</h3>
+               <p>Phones, laptops, headphones, and accessories.</p>
+            </div>
+         </a>
+         <a class="card" href="#">
+            <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Fashion category" />
+            <div class="card-body">
+               <h3>Fashion</h3>
+               <p>Clothing, shoes, and everyday styles.</p>
+            </div>
+         </a>
+         <a class="card" href="#">
+            <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Home category" />
+            <div class="card-body">
+               <h3>Home & Kitchen</h3>
+               <p>Appliances, decor, and kitchen essentials.</p>
+            </div>
+         </a>
+         <a class="card" href="#">
+            <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Books category" />
+            <div class="card-body">
+               <h3>Books</h3>
+               <p>Bestsellers, new releases, and more.</p>
+            </div>
+         </a>
+      </div>
+   </section>
+
+   <section class="section">
+      <h2>Featured deals</h2>
+      <div class="deals-grid">
+         <a class="product" href="#">
+            <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Wireless Headphones" />
+            <div class="product-info">
+               <strong>Wireless Headphones</strong>
+               <div class="price">$59.99</div>
+            </div>
+         </a>
+         <a class="product" href="#">
+            <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Smart Speaker" />
+            <div class="product-info">
+               <strong>Smart Home Speaker</strong>
+               <div class="price">$89.95</div>
+            </div>
+         </a>
+         <a class="product" href="#">
+            <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Kitchen Essentials" />
+            <div class="product-info">
+               <strong>Kitchen Essentials</strong>
+               <div class="price">$24.99</div>
+            </div>
+         </a>
+         <a class="product" href="#">
+            <img src="/img/istockphoto-1571277377-612x612.jpg" alt="Everyday Laptop" />
+            <div class="product-info">
+               <strong>Everyday Laptop</strong>
+               <div class="price">$399.99</div>
+            </div>
+         </a>
+      </div>
+   </section>
+
+   <footer class="footer">
+      © 2026 Amazon-style Demo. All rights reserved.
+   </footer>
+</body>
+
+</html>

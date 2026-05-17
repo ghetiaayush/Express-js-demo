@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="/css/contact.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark">amazon</span> support</div>
+    <nav>
+      <a href="/">Home</a>
+      <!-- <a href="/orders">Orders</a> -->
+      <a href="/login">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Contact Customer Service</h1>
+        <p class="small" style="color:#ffffffeb">We're here to help with orders, returns, device support, and more. Choose an option below to get fast support.</p>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h2 style="margin-top:0">Get help from our team</h2>
+
+          <form id="contactForm" action="/submit" method="post" autocomplete="on">
+            <div class="row" style="margin-bottom:12px">
+              <div class="col">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+              <div class="col">
+                <label for="email">Email or phone</label>
+                <input id="email" name="contact" type="text" placeholder="Email or mobile number" required>
+              </div>
+            </div>
+
+            <div style="margin-bottom:12px">
+              <label for="order">Order ID (optional)</label>
+              <input id="order" name="orderId" type="text" placeholder="Ex: 123-1234567-1234567">
+            </div>
+
+            <div style="margin-bottom:12px">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="">Choose a topic</option>
+                <option>Returns & Refunds</option>
+                <option>Shipping & Delivery</option>
+                <option>Payment & Gift Cards</option>
+                <option>Account & Login</option>
+                <option>Prime & Membership</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom:14px">
+              <label for="message">Tell us more</label>
+              <textarea id="message" name="message" placeholder="Describe your issue" required></textarea>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:center">
+              <button class="btn" type="submit">Contact Us</button>
+              <span class="small">Or choose a quicker option on the right</span>
+            </div>
+          </form>
+        </div>
+
+      <div class="card" style="margin-top:16px">
+          <h3 style="margin:0 0 10px 0">Help articles</h3>
+           <ul style="padding-left:18px;margin:0;color:#333">
+            <li><a class="link" href="#">Track your package</a></li>
+            <li><a class="link" href="#">Start a return</a></li>
+            <li><a class="link" href="#">Manage payment methods</a></li>
+            <li><a class="link" href="#">Change account settings</a></li>
+          </ul> 
+        </div>
+
+      <div class="card faq" style="margin-top:16px">
+          <h3 style="margin:0 0 8px 0">Frequently asked</h3>
+           <details>
+            <summary>How do I return an item?</summary>
+            <div class="small">Go to Orders &gt; Find your order &gt; Return or replace items. Follow the on-screen instructions.</div>
+          </details>
+          <details>
+            <summary>Where's my refund?</summary>
+            <div class="small">Refunds usually appear within 3-5 business days after we receive the item.</div>
+          </details>
+          <details>
+            <summary>I can't sign in. What now?</summary>
+            <div class="small">Use the Forgot Password link on the sign-in page or contact support for account help.</div>
+          </details>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Quick contact</h3>
+
+          <div class="contact-methods">
+            <div class="method">
+              <div class="icon">☎</div>
+              <div>
+                <div style="font-weight:700">Call us</div>
+                <div class="small">1-800-000-0000</div>
+                <div class="support-hours">Available 24 hours, 7 days a week</div>
+              </div>
+            </div>
+
+            <div class="method">
+               <div class="icon">💬</div>
+              <div>
+                <div style="font-weight:700">Live chat</div>
+                <div class="small">Start a chat for real-time help</div>
+                <div style="margin-top:8px"><a class="link" href="/chat">Start Chat</a></div>
+              </div> 
+            </div>
+
+            <div class="method">
+               <div class="icon">📦</div>
+              <div>
+                <div style="font-weight:700">Order support</div>
+                <div class="small">Track or manage your orders</div>
+                <div style="margin-top:8px"><a class="link" href="/orders">Your Orders</a></div>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+         <div class="card" style="margin-top:16px">
+          <h3 style="margin:0 0 8px 0">Need help with devices?</h3>
+          <p class="small">For device setup, repairs, or troubleshooting, visit <a class="link" href="#">Device Support</a> or call device specialists.</p>
+        </div>
+
+         <div class="card" style="margin-top:16px">
+          <h3 style="margin:0 0 8px 0">Local store & pickup</h3>
+          <p class="small">Find pickup points, local stores, and return drop-off locations near you.</p>
+          <a class="link" href="#">Find a location</a>
+        </div> 
+      </aside>
+    </div>
+
+    <div class="footer">
+      © 2026 Amazon-style Demo. For urgent account issues call 1-800-000-0000.
+    </div>
+  </main>
+
+  <script>
+    // simple client-side validation
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      const topic = document.getElementById('topic').value;
+      if (!topic) {
+        alert('Please choose a topic.');
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
