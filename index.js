@@ -1,16 +1,12 @@
 import express from "express";
-import path from "path";
 import submit from "./pages/submit.js";
+import absPath from "./viewPath.js";
 
 // import home from "./pages/home.js";
 // import about from "./pages/about.js";
 // import contact from "./pages/contact.js";
 // import demo, { demo2 } from "./pages/demo.js"; //example of more than one export of function from same file
 // import login from "./pages/login.js";
-
-
-//created absolute path to the view folder to avoid repeating the same code in every route handler
-const absPath = path.resolve("view");
 
 const app = express();
 
